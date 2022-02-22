@@ -1,1 +1,65 @@
-unsupported reparse point
+/*Funcionan con selectores y descriptores*/
+
+* { /*Selector*/
+    border: 1px solid #000000; /*Descriptor*/
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: blue;
+    background-color: #ececec;
+    margin-left: 5%;
+    margin-right: 7%;
+}
+
+div{
+    padding: 10px;
+    margin: 5%;
+}
+
+
+h1, h2, h3 {
+    color: #5e5e5e;
+    text-align: center;
+}
+
+p {
+    color: rgb(8, 9, 43);
+    margin: 20px 10px;
+}
+
+ul{
+    color: darkblue;
+    list-style:square;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+em{
+    background-color: #ffffff;
+}
+
+button{
+    color: beige;
+    background-color: rgb(102, 102, 102);
+    border-radius: 20px;
+}
+
+table{
+    text-align: center;
+    color: #000000;
+}
+
+/* Clases */
+
+.Contenido{
+    font-size: small;
+}
+
+.InicioPag{
+    font-size: large;
+}
+
+/* ID */
+#PrimerSubtitulo{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

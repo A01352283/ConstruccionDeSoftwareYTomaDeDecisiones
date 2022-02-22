@@ -1,1 +1,190 @@
-unsupported reparse point
+    <!DOCTYPE html>
+        <head>
+            <title>Cheatsheet HTML</title>
+            <link rel="stylesheet" type="text/css" href="..\CSS\styles.css"> <!-- Así se pone el CSS -->
+        </head>
+        
+        <!-- Comentarios con Ctrl+K+C
+        Quitar comentarios con Ctrl+K+U -->
+        <body style="background-color: rgb(255, 255, 255);">
+            <h1>Cheat sheet HTML</h1>
+            
+            <h2>a - Hyperlinks</h2>
+            <p>Sirven para definir hyperlinks, que ligan de una página a otra</p>
+            <p>Ejemplo: <a href="https://experiencia21.tec.mx/" target="_blank">Link a Canvas</a></p>
+            
+            <hr>
+            <h2>p - Párrafos</h2>
+            <p>Define un párrafo</p>
+            <p>Ej: Esto es un texto un párrafo</p>
+
+            <hr>
+            <h2>h1, h2, h3, ... - Títulos y subtítulos</h2>
+            <p>Define encabezados de HTML</p>
+            <h3>Esto es un h3</h3>
+
+            <hr>
+            <h2>div - Divisiones</h2>
+            <p>Define una sección o división</p>
+            <div><p>Texto dentro de un div</p></div>
+
+            <hr>
+            <h2>span</h2>
+            <p>Se usa para hacer mark up a una parte de un texto o documento</p>
+            <p>Texto <span style="color:blue">texto azul con span</span> texto sin azul :(</p>
+
+            <hr>
+            <h2>strong</h2>
+            <p>Define texto de importancia, usualmente se usa en negritas</p>
+            <p><strong>STRONG</strong></p>
+
+            <hr>
+            <h2>i</h2>
+            <p>Muestra el texto en cursiva</p>
+            <p><i>Cursiiiva</i></p>
+            
+            <hr>
+            <h2>u</h2>
+            <p>Subraya el texto</p>
+            <p><u>Subrayado -_-_</u></p>
+            
+            <hr>
+            <h2>b</h2>
+            <p>Muestra el texto en negrita sin mayor énfasis</p>
+            <p><b>Bold</b></p>
+            
+            <hr>
+            <h2>strike</h2>
+            <p>Se usaba para tachar texto en HTML 4, del se puede usar en HTML5</p>
+            <p><strike>strike</strike> <del> con tag del</del></p>
+            
+            <hr>
+            <h2>small</h2>
+            <p>Hace el texto más pequeño</p>
+            <p><small>a</small></p>
+            
+            <hr>
+            <h2>em</h2>
+            <p>Hace énfasis en el texto</p>
+            <p><em>¡WOW!</em></p>
+            
+            <hr>
+            <h2>header</h2>
+            <p>Utilizado para el contenido introductorio</p>
+            <header><h2>Título en header</h2><p>Texto en el header</p></header>
+            
+            <hr>
+            <h2>section</h2>
+            <p>Define una sección de un documeto</p>
+            <section><h3>Header sección</h3> <p>Texto en sección</p></section>
+
+            <hr>
+            <h2>article</h2>
+            <p>Especifica contenido independiente</p>
+            <article><h3>Header del article</h3> <p>Texto del article</p></article>
+            
+            <hr>
+            <h2>aside</h2>
+            <p>Pone el contenido, de lado del contenido que lo rodea</p>
+            <aside><h4>Aside título</h4> <p>Aside texto</p></aside>
+            
+            <hr>
+            <h2>footer</h2>
+            <p>Es el pie de página y contiene información de la misma página, como derechos de autor, información de contacto, etc.</p>
+            <footer><p>Información extraída de <a href="https://www.w3schools.com/TAgs/tag_footer.asp">w3schools.com</a></p></footer>
+            
+            <hr>
+            <h2>nav</h2>
+            <p>Define un set de links de navegación</p>
+            <nav><a href="https://www.w3schools.com/TAgs/tag_footer.asp">nav</a>
+            <a href="https://www.w3schools.com/TAgs/tag_footer.asp">footer</a>
+            </nav>
+            
+            <hr>
+            <h2>img</h2>
+            <p>Permite insertar una imagen</p>
+            <img src="https://picsum.photos/200" alt="Foto de lorem picsum">
+            
+            <hr>
+            <h2>br</h2>
+            <p>Un single line break</p>
+            <p>Muchos br a continuación<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+            
+            <hr>
+            <h2>hr</h2>
+            <p>Define cambios temáticos en el contenido</p>
+            <hr>Tema 1
+            <hr>Tema 2
+            <hr>Tema 3
+            
+            <hr>
+            <h2>form</h2>
+            <p>Se usa para tomar input del usuario. Siguiente ejemplo tomando de w3schools:</p>
+            <form>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="CB1">
+                <label for="vehicle1"> Checkbox 1</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="CB2">
+                <label for="vehicle2"> Checkbox 2</label><br>
+                <input type="radio" id="html" name="fav_language" value="R1">
+                <label for="html">Radio 1</label><br>
+                <input type="radio" id="css" name="fav_language" value="R2">
+                <label for="css">Radio 2</label><br>
+                <input type="submit" value="Submit">
+            </form>
+            
+            <hr>
+            <h2>table</h2>
+            <p>Permite crear una tabla.<a href="https://www.w3schools.com/html/html_tables.asp">Tabla tomada de w3schools</a></p>
+            <ul>
+                <li>th define el header</li>
+                <li>tr define una fila</li>
+                <li>td define una celda</li>
+            </ul>
+            <table>
+                <tr>
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+                <tr>
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr>
+                  <td>Centro comercial Moctezuma</td>
+                  <td>Francisco Chang</td>
+                  <td>Mexico</td>
+                </tr>
+              </table>
+            
+            <hr>
+            <h2>ul</h2>
+            <p>Lista sin orden</p>
+            <ul>
+                <li>Elemento</li>
+                <li>Cosa</li>
+                <li>Texto</li>
+            </ul>
+            
+            <hr>
+            <h2>ol</h2>
+            <p>Lista ordenada</p>
+            <p><ol>
+                <li>Uno</li>
+                <li>2</li>
+                <li>Three</li>
+            </ol></p>
+            
+            <hr>
+            <h2>meta</h2>
+            <p>Define la metadata del sitio</p>
+            <meta charset="UTF-8">
+            <meta name="autor" content="Andrés Briseño">
+            
+        </body>
+    </html>
