@@ -1,0 +1,30 @@
+*{
+    border: 1px solid black;
+}
+
+div{
+    padding: 5%;
+}
+
+.box{
+    margin: 5px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+#container1{
+    justify-content: space-between;   
+}
+
+#box4{
+    flex: 1;
+}
+#box5{
+    flex: 3;
+}
+#box6{
+    flex: 4;
+}
