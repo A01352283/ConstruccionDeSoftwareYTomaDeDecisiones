@@ -1,0 +1,88 @@
+#container1{
+    flex-direction: row;
+    background-color: rgb(0, 71, 71);
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding: 5px 10%;
+}
+
+#box1cont1{
+    flex: 10;
+}
+
+#box2cont1{
+    flex: 10;
+}
+
+#emptyboxcont1{
+    flex: 50;
+}
+
+#boxcont1{
+    margin: 5px;
+}
+
+#container2{
+    flex-direction: column;
+    background-color: rgb(212, 138, 0);
+    color: white;
+    padding: 50px 20%;
+    align-items: center;
+}
+#box1cont2{
+    text-align: center;
+}
+
+#box2cont2{
+    font-size: larger;
+}
+
+#container3{
+    color: white;
+    background-color: rgb(0, 71, 71);
+}
+
+#cont3box{
+    flex: 2;
+    align-items: center;
+}
+
+#cont3box1{
+    flex: 1;
+}
+#cont3box2{
+    flex: 1;
+}
+
+#cont3emptybox{
+    flex: 1;
+}
+
+#container4{
+    text-align: center;
+    padding: 50px 100px;
+}
+#container5{
+    background-color: rgb(0, 71, 71);
+    color: white;
+    padding: 20px 45%;
+}
+
+.container{
+    display: flex;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    font-size: xxx-large;
+}
