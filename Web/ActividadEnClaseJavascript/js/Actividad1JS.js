@@ -22,7 +22,12 @@ function main(){
     let ej3Tests = [ [9,8,7,6,5,4,3,2,1], [5,1,2,4,3], [6,4,2,1,5,3,3,2,10], [5,4,3,2,1] ];
     
     for (let i = 0; i < ej3Tests.length; i++) {
-        MergeSort(ej3Tests[i]);
+        document.write("<br><br>Array before sort: ", ej3Tests[i]);
+        
+        let arrLen = ej3Tests[i].length;
+        MergeSort(ej3Tests[i], 0, arrLen - 1);
+        
+        document.write("<br>Array after sort: ", ej3Tests[i]);
     }
 
     //Ej 4
@@ -143,12 +148,13 @@ function FirstNonRepeat(textToCheck) {
 
     //Checks for the first character that appears only once in the map
     for (const charInMap of charMap.entries()) {
-        if(charInMap[1] == 1){
-            firstNonRepeatedChar = charInMap[0];
+        if(charInMap[1] == 1){ //Checks for the value (the repetitions)
+            firstNonRepeatedChar = charInMap[0]; //Stores the key (the letter)
             break;
         }
     }
 
+    //Checks whether there was a character that didn't repeat or not, and displays it if there was
     firstNonRepeatedChar == null ? document.write("<br>Resultado: No char in the string is non repeated") : document.write("<br>Resultado: ", firstNonRepeatedChar);
 }
 
@@ -159,7 +165,7 @@ function Swap(arr, a, b){
     arr[b] = temp;
 }
 
-//Bubble sort
+//Bubble sort from smallest to biggest
 function BubbleSort(numList) {
     document.write("<br><br>List to sort: ", numList);
 
@@ -174,10 +180,71 @@ function BubbleSort(numList) {
     document.write("<br>Sorted list: ", numList);
 }
 
-//Función Merge sort (Recuperado de: https://www.geeksforgeeks.org/merge-sort/)
-function MergeSort(numList){
+//Complementary function to the merge sort algorithm. Merges the split arrays in ascending order
+function Merge(numList, lIndex, midPoint, rIndex){
     
+    //Calculates the temp array sizes
+    let lSize = midPoint - lIndex + 1;
+    let rSize = rIndex - midPoint;
+
+    //Creates the temp arrays with their set sizes
+    let lTemp = new Array(lSize);
+    let rTemp = new Array(rSize)
+
+    //Copies the left and right parts to the temp arrays
+    for (let i = 0; i < lSize; i++) { //Left array
+        lTemp[i] = numList[lIndex + i];
+    }
+
+    for (let i = 0; i < rSize; i++) { //Right array
+        rTemp[i] = numList[midPoint + 1 + i];
+    }
+
+    //Starts to "empty" the right and left arrays by copying the temp array values to the original array
+    let lMerged = 0; //Keeps track of the elements left in the left array
+    let rMerged = 0; //Keeps track of the elements left in the right array
+    let newPosInOriginal = lIndex; //Used to asign the new position of the elements in the original, now being sorted array
+
+    while (lMerged < lSize && rMerged < rSize) { //While no temp arrays have been "emptied"
+        if (lTemp[lMerged] <= rTemp[rMerged]) { //If the current element on the left is smaller, add the element on the left to the main array
+            numList[newPosInOriginal] = lTemp[lMerged];
+            lMerged++;
+        }
+        else{ //If the element on the right is smaller, add the element on the right to the main array
+            numList[newPosInOriginal] = rTemp[rMerged];
+            rMerged++;
+        }
+        newPosInOriginal++; //Go to the next element of the main array
+    }
+
+    //When one of the two temp arrays are "emptied"
+    while (lMerged < lSize) { //Empty the left array
+        numList[newPosInOriginal] = lTemp[lMerged];
+        lMerged++;
+        newPosInOriginal++;
+    }
+
+    while (rMerged < rSize){ //Empty the right array
+        numList[newPosInOriginal] = rTemp[rMerged];
+        rMerged++;
+        newPosInOriginal++;
+    }
 }
+
+//Merge sort from smallest to biggest (Basado en: https://www.geeksforgeeks.org/merge-sort/)
+function MergeSort(numList, lIndex, rIndex){
+    
+    //If the sub arrays are of the same length or there is only one remaining, ends the recursion
+    if(lIndex >= rIndex){
+        return;
+    }
+    
+    let midPoint = lIndex + Math.floor((rIndex - lIndex) / 2); //Gets each mid point
+    
+    MergeSort(numList, lIndex, midPoint); //Recursively splits the left part of the current array or sub array
+    MergeSort(numList, midPoint + 1, rIndex); //Recursively splits the right part of the current array or sub array
+    Merge(numList, lIndex, midPoint, rIndex); //Merges both split arrys in order after the recursive steps end
+}   
 
 //Reverses an array and returns a new array as the result
 function ReverseArray(arrayToReverseOg){
