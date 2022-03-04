@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {   
         //Spawns the enemies
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (Random.Range(0, 101) < 70) //70% chance to spawn enemies on each position
             {

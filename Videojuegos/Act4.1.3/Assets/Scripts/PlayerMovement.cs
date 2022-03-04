@@ -22,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        scoreText.text = "Score: " + score.ToString();
+        transform.rotation = Quaternion.Euler(270f, 90f, -90f); //Starts looking to the front
     }
 
     // Update is called once per frame
@@ -44,7 +45,14 @@ public class PlayerMovement : MonoBehaviour
             score += 50;
             scoreText.text = "Score: " + score.ToString();
         }
+
+        if (other.tag == "Finish")
+        {
+            score += 50;
+            scoreText.text = "You win! Score: " + score.ToString();
+        }
         
+        //Reduces score on enemy contact
         if(other.tag == "Enemy"){
             score--;
             scoreText.text = "Score: " + score.ToString();
@@ -80,15 +88,19 @@ public class PlayerMovement : MonoBehaviour
         //4 way movement
         if (Input.GetKeyDown(KeyCode.UpArrow)){
             transform.position += Vector3.Lerp(transform.position, new Vector3(0f, 1f,0f), interpolationPoint);
+            transform.rotation = Quaternion.Euler(270f, 90f, -90f);
         }
         else if(Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y >= -3f){
             transform.position += Vector3.Lerp(transform.position, new Vector3(0f, -1f,0f), interpolationPoint);
+            transform.rotation = Quaternion.Euler(90f, 90f, -90f);
         }
         else if(Input.GetKeyDown(KeyCode.RightArrow) && transform.position.x < 5f){
             transform.position += Vector3.Lerp(transform.position, new Vector3(1f, 0f,0f), interpolationPoint);
+            transform.rotation = Quaternion.Euler(0f, 90f, -90f);
         }
         else if(Input.GetKeyDown(KeyCode.LeftArrow) && transform.position.x > -5f){
             transform.position += Vector3.Lerp(transform.position, new Vector3(-1f, 0f,0f), interpolationPoint);
+            transform.rotation = Quaternion.Euler(180f, 90f, -90f);
         }
         MoveCamera();
     }

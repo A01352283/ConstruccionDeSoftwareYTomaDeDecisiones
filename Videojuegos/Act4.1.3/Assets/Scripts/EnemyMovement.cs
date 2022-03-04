@@ -21,8 +21,10 @@ public class EnemyMovement : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
+        
+        //Destroy enemy on contact with player
         if (other.tag == "Player")
-        {
+        {   
             Destroy(this.gameObject);
         }
     }
@@ -33,6 +35,7 @@ public class EnemyMovement : MonoBehaviour
         
     }
 
+    //Moves the enemy from left to right
     void Move(){ 
         transform.position += new Vector3(1f, 0f, 0f); //Skips the enemy GameObject 1 unit to the right
 
@@ -41,6 +44,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    //Moves the enemy from right to left
     void MoveLeft(){ 
         transform.position += new Vector3(-1f, 0f, 0f); //Skips the enemy GameObject 1 unit to the left
 
