@@ -206,15 +206,15 @@ function Merge(numList, lIndex, midPoint, rIndex){
     let newPosInOriginal = lIndex; //Used to asign the new position of the elements in the original, now being sorted array
 
     while (lMerged < lSize && rMerged < rSize) { //While no temp arrays have been "emptied"
-        if (lTemp[lMerged] <= rTemp[rMerged]) {
+        if (lTemp[lMerged] <= rTemp[rMerged]) { //If the current element on the left is smaller, add the element on the left to the main array
             numList[newPosInOriginal] = lTemp[lMerged];
             lMerged++;
         }
-        else{
+        else{ //If the element on the right is smaller, add the element on the right to the main array
             numList[newPosInOriginal] = rTemp[rMerged];
             rMerged++;
         }
-        newPosInOriginal++;
+        newPosInOriginal++; //Go to the next element of the main array
     }
 
     //When one of the two temp arrays are "emptied"
@@ -224,7 +224,7 @@ function Merge(numList, lIndex, midPoint, rIndex){
         newPosInOriginal++;
     }
 
-    while (rMerged < rSize){
+    while (rMerged < rSize){ //Empty the right array
         numList[newPosInOriginal] = rTemp[rMerged];
         rMerged++;
         newPosInOriginal++;
