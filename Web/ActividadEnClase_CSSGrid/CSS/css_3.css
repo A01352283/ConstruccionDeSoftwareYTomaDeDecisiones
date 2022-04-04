@@ -1,0 +1,37 @@
+body{
+    height: 100vh;
+}
+
+.grid-container{
+    display: grid;
+    height: 100%;
+
+    grid-template-columns: 4;
+    grid-template-rows: 4;
+
+    grid-template-areas: 
+    "header header header header"
+    "main1 main2 main2 main2"
+    "main1 main2 main2 main2"
+    "footer footer footer footer";
+}
+
+.grid-item{
+    margin: 5px;
+}
+
+.grid-item-1{
+    grid-area: header;
+}
+
+.grid-item-2{
+    grid-area: main1;
+}
+
+.grid-item-3{
+    grid-area: main2;
+}
+
+.grid-item-4{
+    grid-area: footer;
+}

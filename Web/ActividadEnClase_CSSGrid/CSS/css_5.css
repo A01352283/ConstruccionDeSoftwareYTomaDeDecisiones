@@ -1,0 +1,14 @@
+body{
+    height: 100vh;
+}
+
+.grid-container{
+    display: grid;
+    height: 100%;
+
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-item{
+    margin: 5px;
+}

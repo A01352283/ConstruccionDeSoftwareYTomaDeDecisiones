@@ -1,0 +1,12 @@
+body{
+    height: 100vh;
+}
+
+.grid-container{
+    display: grid;
+    height: 100%;
+}
+
+.grid-item{
+    margin: 5px;
+}
